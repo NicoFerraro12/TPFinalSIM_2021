@@ -10,7 +10,7 @@ public class Calculator {
 
     //cantidad de simulaciones realizadas 
     int cantExperimentos = 1;
-    private DecimalFormat df = new DecimalFormat("0.00");
+    private final DecimalFormat df = new DecimalFormat("0.00");
 
     int acumSiSuperaLimite = 0;
     DefaultTableModel tm;
@@ -43,7 +43,7 @@ public class Calculator {
     private int contPinos9 = 0;
     private int contPinos10 = 0;
 
-    private HashMap<Integer, Float> puntosMedios = new HashMap<>();
+    private final HashMap<Integer, Float> puntosMedios = new HashMap<>();
 
     public Calculator() {
 
