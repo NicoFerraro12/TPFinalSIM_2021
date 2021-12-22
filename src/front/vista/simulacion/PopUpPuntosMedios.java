@@ -18,6 +18,7 @@ public class PopUpPuntosMedios extends javax.swing.JFrame {
     public PopUpPuntosMedios() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setTitle("Tabla de promedio de puntos por numero de bolos tirados en primer intento");
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setearTabla();
         ptosMedios = new HashMap<>();
@@ -135,14 +136,14 @@ public class PopUpPuntosMedios extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(scpPtosMedios, javax.swing.GroupLayout.DEFAULT_SIZE, 468, Short.MAX_VALUE)
+                .addComponent(scpPtosMedios, javax.swing.GroupLayout.DEFAULT_SIZE, 576, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(scpPtosMedios, javax.swing.GroupLayout.DEFAULT_SIZE, 475, Short.MAX_VALUE)
+                .addComponent(scpPtosMedios, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
