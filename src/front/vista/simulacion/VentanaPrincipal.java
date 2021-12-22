@@ -11,10 +11,10 @@ import objects.Controller;
 
 public class VentanaPrincipal extends javax.swing.JFrame {
     Controller controller;
-    int cantRondas=0; 
-    int puntaje10PrimerTiro=0; 
-    int puntaje10SegundoTiro=0; 
-    int valorSuperar=0;
+    int cantRondas = 0; 
+    int puntaje10PrimerTiro = 0; 
+    int puntaje10SegundoTiro = 0; 
+    int valorSuperar = 0;
     Calculator calculator = new Calculator();
     boolean valuesSet = false;
     private final DecimalFormat df = new DecimalFormat("0.00");
@@ -44,7 +44,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         prepararValoresPorDefault();
         popUpPuntos = new PopUpPuntosMedios();
         this.setTitle("Trabajo Practico Final Simulacion 2021 - Ferraro, Pablo Nicolás");
-        //btn_mostrarPtos.setEnabled(false);
+        btn_mostrarPtos.setEnabled(false);
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -106,8 +106,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         resultado_txt = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
         cargarPorDefecto = new javax.swing.JButton();
         btn_mostrarPtos = new javax.swing.JButton();
 
@@ -614,28 +612,15 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(255, 51, 51));
         jLabel9.setText("La probabilidad de que supere es:");
 
-        jTextArea2.setEditable(false);
-        jTextArea2.setBackground(new java.awt.Color(204, 204, 204));
-        jTextArea2.setColumns(20);
-        jTextArea2.setFont(new java.awt.Font("Calibri Light", 0, 13)); // NOI18N
-        jTextArea2.setRows(3);
-        jTextArea2.setText("Primero ingrese las probabilidades deseadas en cada tabla.\nLuego ingrese los parámetros debajo requeridos.\nSeleccione Guardar cambios y simular. \nO utilice valores por defecto seleccionando el boton para ello.");
-        jScrollPane6.setViewportView(jTextArea2);
-
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
-                .addContainerGap(13, Short.MAX_VALUE))
+            .addGap(0, 18, Short.MAX_VALUE)
         );
 
         cargarPorDefecto.setText("Cargar valores por defecto");
@@ -708,7 +693,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(10, 10, 10)
                 .addComponent(scpSimulacion, javax.swing.GroupLayout.PREFERRED_SIZE, 496, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -750,7 +735,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                         .addComponent(cargarPorDefecto)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btn_mostrarPtos)))
-                .addContainerGap(87, Short.MAX_VALUE))
+                .addContainerGap(135, Short.MAX_VALUE))
         );
 
         pack();
@@ -804,6 +789,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         {
             throw new InputException("Desde debe ser menor a Hasta");
         }
+        if (Integer.parseInt(_txtDesde.getText()) > 500)
+        {
+            throw new InputException("Desde debe ser menor a 500");
+        }
     }
     
    
@@ -822,7 +811,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         popUpPuntos.setPuntos(null);
         calculator.vaciarMap();
         scpSimulacion.setSelectedIndex(0);
-        //btn_mostrarPtos.setEnabled(false);
+        btn_mostrarPtos.setEnabled(false);
     }//GEN-LAST:event__btnLimpiarActionPerformed
 
     private void cargarPorDefectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargarPorDefectoActionPerformed
@@ -885,11 +874,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
-    private javax.swing.JTextArea jTextArea2;
     private javax.swing.JLabel lblDespues10;
     private javax.swing.JLabel lblDespues9;
     private javax.swing.JTextField resultado_txt;

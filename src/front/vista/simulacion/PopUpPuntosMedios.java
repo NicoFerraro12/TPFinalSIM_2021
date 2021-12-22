@@ -1,6 +1,7 @@
 package front.vista.simulacion;
 
 import java.util.HashMap;
+import javax.swing.JFrame;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
@@ -16,6 +17,8 @@ public class PopUpPuntosMedios extends javax.swing.JFrame {
     
     public PopUpPuntosMedios() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setearTabla();
         ptosMedios = new HashMap<>();
     }
