@@ -18,7 +18,7 @@ public class PopUpPuntosMedios extends javax.swing.JFrame {
     public PopUpPuntosMedios() {
         initComponents();
         this.setLocationRelativeTo(null);
-        this.setTitle("Tabla de promedio de puntos por numero de bolos tirados en primer intento");
+        this.setTitle("Tabla de promedio de puntos por numero de bolos tirados en primer tiro");
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setearTabla();
         ptosMedios = new HashMap<>();
